@@ -31,7 +31,7 @@ steps:
     command: 'test'
     projects: '**/*Test.csproj'
     testRunTitle: '--no-restore'
-  displayname: 'unit testing'
+  displayName: 'unit testing'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
@@ -39,4 +39,4 @@ steps:
     projects: '**/customerapi.csproj'
     arguments: '-configuration $(buildconfiguration) --no-retsore' 
     zipAfterPublish: true
-  displayname: publish-package
+  displayName: publish-package
