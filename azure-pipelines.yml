@@ -19,7 +19,7 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
     feedsToUse: 'select'
-  displayName: 'restore nuget packages'
+  displayName: 'restore Nuget packages'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
