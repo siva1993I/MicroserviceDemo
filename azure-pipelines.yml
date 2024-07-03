@@ -19,19 +19,19 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
     feedsToUse: 'select'
-  DisplayName: 'restore nuget packages'
+  displayName: 'restore nuget packages'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: '**/*.csproj'
     arguments: '--no-restore'
-  DisplayName: 'build'
+  displayName: 'build'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
     projects: '**/*Test.csproj'
     testRunTitle: '--no-restore'
-  Displayname: 'unit testing'
+  displayname: 'unit testing'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
@@ -39,4 +39,4 @@ steps:
     projects: '**/customerapi.csproj'
     arguments: '-configuration $(buildconfiguration) --no-retsore' 
     zipAfterPublish: true
-  Displayname: publish-package
+  displayname: publish-package
